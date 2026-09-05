@@ -1,0 +1,79 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>ShowMatch</title>
+    <link rel="icon" type="image/jpg" href="images/showmatch-favicon.jpg">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main>
+        <section class="hero">
+            <div class="hero-title">
+                <img src="images/showmatch-favicon.jpg"
+                     alt="ShowMatch logo">
+    
+
+            <div class="hero-text">
+                <h1 >Lost on what to watch next?</h1>
+                <h2 >Find your perfect show match!</h2>
+            </div>
+        </div>
+    <div class="recommendation-instruction">
+
+        <h3>Select 1–5 movies or TV shows you love,and we'll find your perfect matches.</h3>
+
+        <p>For the best recommendations, we recommend selecting 5.</p>
+
+        <p id="selection-count">0/5 selected</p>
+
+    </div>
+        <div class="search-container">
+            <div class="search-box">
+            <input type="text"
+                   id="search-input"
+                   placeholder="Search for a movie or TV show...">
+<div id="search-suggestions"></div>
+            </div>
+        
+        <button id="search-button">
+            Search
+        </button>           
+        </div>
+        <button id="recommend-button">Find My Recommendations</button>
+        </section>
+
+        <section class="search-results" id="search-results-section">
+    <h2>Search Results</h2>
+
+    <div class="movie-grid" id="search-results-grid">
+    </div>
+</section>
+
+<div id="recommendation-overlay" class="recommendation-overlay">
+    <div class="recommendation-content">
+        <button id="close-recommendations">✕</button>
+
+        <h2>Your Perfect Matches</h2>
+
+        <div id="recommendation-grid"></div>
+    </div>
+</div>
+
+        <section class="trending">
+            <h2>Trending Movies & Series</h2>
+            <div class="movie-grid" id="movie-grid">
+
+            </div>
+        </section>
+    </main>
+
+ 
+
+
+    <script src="js/script.js"></script>
+</body>
+
+
+</html>
