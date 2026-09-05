@@ -58,7 +58,7 @@ searchButton.addEventListener("click", () => {
     searchSuggestions.innerHTML = "";
     searchResultsSection.style.display = "block";
     searchResultsGrid.innerHTML = "";
-    fetch(`http://127.0.0.1:5000/api/search?query=${encodeURIComponent(query)}`)
+    fetch(`https://showmatch-backend.onrender.com/api/search?query=${encodeURIComponent(query)}`)
         .then(response => response.json())
         .then(data => {
             data.results.slice(0, 5).forEach(item => {
@@ -84,7 +84,7 @@ searchInput.addEventListener("input", () => {
         return;
     }
     searchTimeout = setTimeout(() => {
-        fetch(`http://127.0.0.1:5000/api/search?query=${encodeURIComponent(query)}`)
+        fetch(`https://showmatch-backend.onrender.com/api/search?query=${encodeURIComponent(query)}`)
             .then(response => response.json())
             .then(data => {
                 if (searchInput.value.trim() !== query) {
@@ -116,7 +116,7 @@ searchInput.addEventListener("input", () => {
 });
 
 
-fetch("http://127.0.0.1:5000/api/trending")
+fetch("https://showmatch-backend.onrender.com/api/trending")
     .then(response => response.json())
     .then(data => {
         const movieGrid = document.getElementById("movie-grid");
@@ -132,7 +132,7 @@ fetch("http://127.0.0.1:5000/api/trending")
 
 document.getElementById("recommend-button").addEventListener("click", () => {
 
-    fetch("http://127.0.0.1:5000/api/recommend", {
+    fetch("https://showmatch-backend.onrender.com/api/recommend", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -146,7 +146,7 @@ document.getElementById("recommend-button").addEventListener("click", () => {
     console.log("Recommendations:", data);
     recommendationGrid.innerHTML = "";
     data.forEach(id => {
-        fetch(`http://127.0.0.1:5000/api/movie/${id}`)
+        fetch(`https://showmatch-backend.onrender.com/api/movie/${id}`)
             .then(response => response.json())
             .then(item => {
                 const card = createMovieCard(item);
