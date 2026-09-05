@@ -388,24 +388,22 @@ body {
         font-size: 13px;
     }
 
-    .search-container {
-        flex-direction: row;
-        width: 100%;
-        gap: 8px;
-    }
-
-    
-
-    .search-box {
-    width: auto;
-    flex: 1;
+   .search-container {
+    flex-direction: row;
+    width: 100%;
+    gap: 8px;
 }
 
-    .search-container button {
-    width: auto;
-    padding: 15px 10px;
-    font-size: 14px;
-    flex-shrink: 0;
+.search-box {
+    width: 0;
+    flex: 1 1 auto;
+}
+
+.search-container button {
+    width: 70px;
+    flex: 0 0 70px;
+    padding: 15px 5px;
+    font-size: 13px;
 }
     #recommend-button {
         font-size: 16px;
