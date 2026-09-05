@@ -389,9 +389,14 @@ body {
     }
 
     .search-container {
-        flex-direction: column;
+        flex-direction: row;
         width: 100%;
-        gap: 10px;
+        gap: 8px;
+    }
+    
+    search-container button {
+    width: auto;
+    padding: 15px 12px;
     }
 
     .search-box {
