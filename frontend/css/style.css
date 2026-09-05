@@ -334,3 +334,150 @@ body {
     grid-template-columns: repeat(5, 1fr);
     gap: 20px;
 }
+/* Mobile layout */
+
+@media (max-width: 600px) {
+
+    .hero {
+        min-height: auto;
+        padding: 40px 20px;
+    }
+
+    .hero-title {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .hero-title img {
+        width: 75px;
+        height: 75px;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 28px;
+        margin-bottom: 8px;
+    }
+
+    .hero-text h2 {
+        font-size: 28px;
+    }
+
+    .recommendation-instruction {
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    .recommendation-instruction h3 {
+        font-size: 17px;
+        line-height: 1.4;
+    }
+
+    .recommendation-instruction p {
+        font-size: 14px;
+    }
+
+    .recommendation-instruction #selection-count {
+        top: 15px;
+        right: 15px;
+        padding: 8px 10px;
+        font-size: 13px;
+    }
+
+    .search-container {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+    .search-container button {
+        width: 100%;
+    }
+
+    #recommend-button {
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    .trending {
+        padding: 0 15px 50px;
+    }
+
+    .trending h2 {
+        font-size: 27px;
+        margin-top: 25px;
+        margin-bottom: 20px;
+    }
+
+    .movie-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .movie-info {
+        padding: 9px;
+    }
+
+    .movie-info h3 {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .movie-info p {
+        font-size: 12px;
+    }
+
+    .movie-overlay {
+        padding: 15px;
+    }
+
+    .movie-overlay h3 {
+        font-size: 16px;
+        margin-bottom: 8px;
+        margin-top: 5px;
+    }
+
+    .movie-overlay p {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+
+    .search-results {
+        padding: 0 15px 50px;
+    }
+
+    .search-results h2 {
+        font-size: 27px;
+        margin-bottom: 20px;
+    }
+
+    #recommendation-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .recommendation-content {
+        width: 95%;
+        margin: 20px auto;
+        padding: 20px 12px;
+    }
+
+    .recommendation-content h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    #close-recommendations {
+        top: 10px;
+        right: 12px;
+        font-size: 24px;
+    }
+}
