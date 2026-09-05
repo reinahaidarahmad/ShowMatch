@@ -11,9 +11,7 @@ vectorizer=TfidfVectorizer()
 vectors=vectorizer.fit_transform(movies["tags"])
 print("vectors created:",vectors.shape)
 
-similarity=cosine_similarity(vectors)
 
-print("similarity matrix created:",similarity.shape)
 
 
 def recommend(selected_ids):
@@ -22,7 +20,11 @@ def recommend(selected_ids):
     ].index.tolist()
     if not selected_indices:
         return []
-    selected_similarities = similarity[selected_indices]
+    selected_vectors = vectors[selected_indices]
+    selected_similarities = cosine_similarity(
+    selected_vectors,
+    vectors)
+    
     average_similarity = selected_similarities.mean(axis=0)
     average_similarity[selected_indices] = -1
     top_indices = average_similarity.argsort()[::-1]
