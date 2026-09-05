@@ -2,7 +2,7 @@ import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer 
 from sklearn.metrics.pairwise import cosine_similarity
 
-movies=pd.read_csv("backend/ourdataset.csv")
+movies=pd.read_csv("ourdataset.csv")
 
 print("dataset loaded:",len(movies))
 
